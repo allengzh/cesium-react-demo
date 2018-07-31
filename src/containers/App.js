@@ -7,7 +7,11 @@ import Heatmap from '../routes/heatmap';
 import Car from '../routes/car';
 import MapImage from '../routes/map-image';
 import MapVector from '../routes/map-vector';
+import BuildModuleUrl from 'cesium/Core/buildModuleUrl';
 import './App.less';
+import 'cesium/Widgets/widgets.css';
+
+BuildModuleUrl.setBaseUrl('./');
 
 const TabPane = Tabs.TabPane;
 

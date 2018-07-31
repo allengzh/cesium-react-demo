@@ -82,11 +82,15 @@ module.exports = {
       'api': resolve('src/api'),
       'components': resolve('src/components'),
       'utils': resolve('src/utils'),
-      'views': resolve('src/views')
+      'views': resolve('src/views'),
+      'cesium': resolve('node_modules/cesium/Source')
     }
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      Cesium: 'cesium/Cesium'
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
